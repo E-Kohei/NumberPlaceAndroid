@@ -1,0 +1,68 @@
+<!--
+ ~ Copyright 2019, E-Kohei
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     https://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorPrimary">@color/textColorPrimary</item>
+		<item name="android:actionMenuTextColor">@color/textColorPrimary</item>
+	</style>
+
+	<style name="SudokuTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- theme for the activity for sudoku -->
+		<item name="colorPrimary">@android:color/white</item>
+	</style>
+	<style name="SudokuTheme.Red" parent="SudokuTheme">
+		<!-- theme for PlayActivity -->
+		<item name="colorPrimaryDark">@color/darkred</item>
+		<item name="colorAccent">@color/faintpink</item>
+	</style>
+	<style name="SudokuTheme.Blue" parent="SudokuTheme">
+		<!-- theme for MakeActivity -->
+		<item name="colorPrimaryDark">@color/seablue</item>
+		<item name="colorAccent">@color/faintblue</item>
+	</style>
+	<style name="SudokuTheme.Green" parent="SudokuTheme">
+		<!-- theme for SavedActivity -->
+		<item name="colorPrimaryDark">@color/denseforest</item>
+		<item name="colorAccent">@color/vividgreen</item>
+	</style>
+
+	<style name="AlertStyleRed" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<!-- theme for alert dialog in PlayActivity -->
+		<item name="colorAccent">@color/darkred</item>
+	</style>
+	<style name="AlertStyleBlue" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<!-- theme for alert dialog in MakeActivity -->
+		<item name="colorAccent">@color/seablue</item>
+	</style>
+	<style name="AlertStyleGreen" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<!-- theme for alert dialog in SavedActivity -->
+		<item name="colorAccent">@color/denseforest</item>
+	</style>
+
+	<style name="sudokuButton" parent="android:Widget.Button">
+		<item name="android:background">@drawable/selector_button</item>
+		<item name="android:textColor">@android:color/black</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+</resources>

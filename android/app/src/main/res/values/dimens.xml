@@ -1,0 +1,8 @@
+<resources>
+	<!-- defautl -->
+	<dimen name="manual_image_height">400dp</dimen>
+	<dimen name="sudoku_item_height">150dp</dimen>
+	<dimen name="sudoku_item_view_height">145dp</dimen>
+	<dimen name="divider_length">140dp</dimen>
+	<dimen name="toolbar_height">50dp</dimen>
+</resources>

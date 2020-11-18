@@ -1,0 +1,98 @@
+<!--
+ ~ Copyright 2019, E-Kohei
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     https://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ -->
+
+<resources>
+	<string name="app_name">NumberPlace</string>
+
+	<!-- strings for MainMenuFragment and LevelListFragment -->
+	<string name="menu_play">解く</string>
+	<string name="menu_make">作る</string>
+	<string name="menu_saved">コレクション</string>
+	<string name="menu_newbie">超初級</string>
+	<string name="menu_beginner">初級</string>
+	<string name="menu_medium">中級</string>
+	<string name="menu_master">上級</string>
+	<string name="menu_legend">伝説級</string>
+
+	<!-- strings for ManualActivity -->
+	<string name="menu_basic_operation">基本操作</string>
+	<string name="menu_play_manual">パズルを解く</string>
+	<string name="menu_make_manual">パズルを作る</string>
+	<string name="menu_saved_manual">保存したパズルを扱う</string>
+
+	<!-- strings for Menu Items of Sudoku Activity -->
+	<string name="action_about">このアプリについて</string>
+	<string name="action_manual">マニュアル</string>
+	<string name="action_save">保存</string>
+	<string name="action_play">プレイ</string>
+	<string name="action_make">編集</string>
+	<string name="action_undo">もとに戻す</string>
+	<string name="action_new">次のパズル</string>
+	<string name="action_restart">最初から</string>
+	<string name="action_clear_note">メモを消去</string>
+	<string name="action_check_solvability">検証</string>
+	<string name="action_solve">自動解答</string>
+	<string name="action_setting">設定</string>
+	<string name="you_did">グッジョブ！！</string>
+
+	<!-- strings for Dialog -->
+	<string name="dialog_eula_title">使用許諾とプライバシーポリシー</string>
+	<string name="agree">同意する</string>
+	<string name="dont_agree">同意しない</string>
+	<string name="dialog_about_title">このアプリについて</string>
+	<string name="address_title">メール:</string>
+	<string name="address">norana.dev@gmail.com</string>
+	<string name="dialog_solved_title">おめでとう！</string>
+	<string name="dialog_solved_text">パズルが解けました！\n経過時間: %s</string>
+	<string name="io_error">申し訳ありません。ファイルの読み込み中にエラーが発生しました。
+	</string>
+	<string name="ok">OK</string>
+	<string name="yes">はい</string>
+	<string name="no">いいえ</string>
+	<string name="dialog_play_notsaved_message">現在のパズルを保存しますか？</string>
+	<string name="dialog_saved_notsaved_message">変更内容を保存しますか？</string>
+	<string name="dialog_goto_next_puzzle">次のパズルに進みますか？</string>
+	<string name="dialog_realy_solve">自動解答機能を使いますか？</string>
+	<string name="dialog_restart_puzzle">最初から解きなおしますか？</string>
+
+	<!-- strings for sudoku item view -->
+	<string name="loading_text">読み込み中...</string>
+	<string name="empty_text">保存されたパズルはありません</string>
+	<string name="delete_text">削除</string>
+	<string name="copy_text">複製</string>
+	<string name="text_playing">プレイ中</string>
+	<string name="text_making">作成中</string>
+	<string name="text_solved">解答済み</string>
+	<string name="time_text">%d:%02d:%02d</string>
+
+	<!-- strings for Background Thread that manipulates sudoku -->
+	<!-- SolveSudoku -->
+	<string name="solving_text">パズルを解答中...</string>
+	<string name="solving_finished">パズルの解答が完了しました</string>
+	<string name="not_solvable">このパズルは解けません</string>
+	<string name="several_solutions">
+		このパズルには複数の答えがあります
+	</string>
+	<string name="computation_error">申し訳ありません。計算中にエラーが発生しました。
+	</string>
+	<!-- CheckSudoku -->
+	<string name="checking_text">パズルを検証中...</string>
+	<string name="solvable">このパズルは解けます</string>
+	<!-- MakeSudoku -->
+	<string name="making_text">パズルを作成中...</string>
+	<string name="making_successed">パズルの作成が完了しました</string>
+	<string name="making_failed">申し訳ありません。作成に失敗しました。</string>
+</resources>

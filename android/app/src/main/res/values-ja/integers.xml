@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="slide_up_duration">500</integer>
+	<integer name="fall_down_duration">600</integer>
+	<integer name="button_fade_duration">400</integer>
+	<integer name="transition_fade_duration">800</integer>
+	<integer name="transition_slide_duration">600</integer>
+	<integer name="blow_duration">600</integer>
+	<integer name="blow_delay">200</integer>
+	<integer name="enter_duration">700</integer>
+	<integer name="enter_offset">1400</integer>
+</resources>

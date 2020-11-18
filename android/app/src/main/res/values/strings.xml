@@ -1,0 +1,96 @@
+<!--
+ ~ Copyright 2019, E-Kohei
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     https://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ -->
+
+<resources>
+	<string name="app_name">NumberPlace</string>
+
+	<!-- strings for MainMenuFragment, LevelListFragment and ManualListFragment -->
+	<string name="menu_play">Play</string>
+	<string name="menu_make">Make</string>
+	<string name="menu_saved">Collection</string>
+	<string name="menu_newbie">Newbie</string>
+	<string name="menu_beginner">Beginner</string>
+	<string name="menu_medium">Medium</string>
+	<string name="menu_master">Master</string>
+	<string name="menu_legend">Legend</string>
+
+	<!-- strings for ManualActivity -->
+	<string name="menu_basic_operation">Basic operation</string>
+	<string name="menu_play_manual">Play puzzles</string>
+	<string name="menu_make_manual">Make puzzles</string>
+	<string name="menu_saved_manual">Handle the saved puzzles</string>
+
+	<!-- strings for menu items of Sudoku Activity -->
+	<string name="action_about">About</string>
+	<string name="action_manual">Manual</string>
+	<string name="action_save">Save</string>
+	<string name="action_play">Play</string>
+	<string name="action_make">Edit</string>
+	<string name="action_undo">Undo</string>
+	<string name="action_new">New Puzzle</string>
+	<string name="action_restart">Restart</string>
+	<string name="action_clear_note">Clear notes</string>
+	<string name="action_check_solvability">Check if Solvable</string>
+	<string name="action_solve">Find answer</string>
+	<string name="action_setting">Setting</string>
+	<string name="you_did">Good job!!</string>
+
+	<!-- strings for Dialog -->
+	<string name="dialog_eula_title">EULA and Privacy Policy</string>
+	<string name="agree">I agree</string>
+	<string name="dont_agree">I don\'t agree</string>
+	<string name="dialog_about_title">About this app</string>
+	<string name="address_title">Email:</string>
+	<string name="address">norana.dev@gmail.com</string>
+	<string name="dialog_solved_title">Congrats!</string>
+	<string name="dialog_solved_text">You solved this puzzle!!\nTime: %s</string>
+	<string name="io_error">Sorry, an error occurred during reading a file</string>
+	<string name="ok">OK</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="dialog_play_notsaved_message">Do you want to save the current puzzle before closing?</string>
+	<string name="dialog_saved_notsaved_message">Do you want to save changes before closing?</string>
+	<string name="dialog_goto_next_puzzle">Do you want to play a new puzzle?</string>
+	<string name="dialog_realy_solve">Do you want to find answer?</string>
+	<string name="dialog_restart_puzzle">Do you want to restart this puzzle?</string>
+
+	<!-- strings for sudoku item view -->
+	<string name="loading_text">Loading...</string>
+	<string name="empty_text">No puzzle is saved</string>
+	<string name="delete_text">Delete</string>
+	<string name="copy_text">Copy</string>
+	<string name="text_playing">Playing</string>
+	<string name="text_making">Making</string>
+	<string name="text_solved">Solved</string>
+	<string name="time_text">%d:%02d:%02d</string>
+
+	<!-- strings for Background Thread that manipulates sudoku -->
+	<!-- SolveSudoku -->
+	<string name="solving_text">Solving...</string>
+	<string name="solving_finished">Finished solving</string>
+	<string name="not_solvable">This number place cannot be solved</string>
+	<string name="several_solutions">
+		This number place has several solutions
+	</string>
+	<string name="computation_error">Sorry, an error occurred during computation</string>
+	<!-- CheckSudoku -->
+	<string name="checking_text">Checking...</string>
+	<string name="solvable">This number place is solvable</string>
+	<!-- MakeSudoku -->
+	<string name="making_text">Making...</string>
+	<string name="making_successed">Finished making</string>
+	<string name="making_failed">Sorry, failed to make a puzzle</string>
+</resources>
