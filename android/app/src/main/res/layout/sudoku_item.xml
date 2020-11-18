@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~ Copyright 2019, E-Kohei
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     https://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ -->
+
+<!-- layout file for a recyclerview item of a saved sudoku -->
+<layout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<data>
+		<import type="java.util.List"/>
+		<import type="android.view.View"/>
+		<variable
+			name="sudokuItem"
+			type="com.norana.numberplace.database.SudokuItem"/>
+		<variable
+			name="statusList"
+			type="List&lt;String>"/>
+		<variable
+			name="callback"
+			type="com.norana.numberplace.ui.callback.SudokuClickCallback"/>
+		<variable
+			name="deleteCallback"
+			type="com.norana.numberplace.ui.callback.DeleteClickCallback"/>
+		<variable
+			name="copyCallback"
+			type="com.norana.numberplace.ui.callback.CopyClickCallback"/>
+	</data>
+
+	<!-- linear layout to hold two cardviews (showed one and hidden one) -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/sudoku_item_height"
+		android:layout_marginTop="6dp"
+		android:layout_marginBottom="6dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:tag="linearlayout">
+
+		<!-- cardview to display sudoku item -->
+		<androidx.cardview.widget.CardView
+			android:id="@+id/sudoku_container"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginRight="5dp"
+			android:onClick="@{() -> callback.onClick(sudokuItem)}"
+			app:cardBackgroundColor="@color/faintgreen"
+			app:cardCornerRadius="10dp"
+			app:cardElevation="0dp">
+
+			<RelativeLayout
+				android:id="@+id/parent"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<com.norana.numberplace.view.SudokuView
+					android:id="@+id/sudoku_item_view"
+					android:layout_width="@dimen/sudoku_item_view_height"
+					android:layout_height="@dimen/sudoku_item_view_height"
+					android:layout_margin="5dp"
+					android:layout_alignParentLeft="true"
+					android:transitionName="sudokuTransition"
+					app:sudoku="@{sudokuItem.sudoku}"/>
+
+				<TextView
+					android:id="@+id/sudoku_status"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:layout_toRightOf="@id/sudoku_item_view"
+					android:text="@{statusList[sudokuItem.status]}"
+					android:textSize="20sp"
+					android:textColor="@android:color/black"
+					android:maxLines="1"/>
+
+				<TextView
+					android:id="@+id/sudoku_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:layout_toRightOf="@id/sudoku_item_view"
+					android:layout_below="@id/sudoku_status"
+					android:text="@{String.format(@string/time_text, sudokuItem.time/3600000, sudokuItem.time/60000%60, sudokuItem.time/1000%60)}"
+					android:textSize="20sp"
+					android:textColor="@android:color/black"
+					android:maxLines="1"
+					android:visibility="@{sudokuItem.time==-1 ? View.INVISIBLE : View.VISIBLE}"/>
+			</RelativeLayout>
+		</androidx.cardview.widget.CardView>
+
+		<!-- hidden cardview to display menus for sudoku item -->
+		<androidx.cardview.widget.CardView
+			android:id="@+id/menu_button"
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0"
+			android:tag="menu_button"
+			app:cardBackgroundColor="@color/faintgreen"
+			app:cardCornerRadius="10dp"
+			app:cardElevation="0dp">
+
+			<!-- arrange two items with same width -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="@drawable/divider"
+				android:dividerPadding="5dp"
+				android:showDividers="middle"
+				android:orientation="horizontal">
+
+				<!-- framelayout to receive delete click callback -->
+				<FrameLayout
+					android:onClick="@{()->deleteCallback.onClick(sudokuItem)}"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:id="@+id/delete"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="@string/delete_text"
+						android:textSize="20sp"
+						android:textColor="@android:color/black"
+						android:maxLines="1"/>
+				</FrameLayout>
+
+				<!-- framelayout to receive copy click callback -->
+				<FrameLayout
+					android:onClick="@{()->copyCallback.onClick(sudokuItem)}"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:id="@+id/copy"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="@string/copy_text"
+						android:textSize="20sp"
+						android:textColor="@android:color/black"
+						android:maxLines="1"/>
+				</FrameLayout>
+
+			</LinearLayout>
+		</androidx.cardview.widget.CardView>
+
+	</LinearLayout>
+</layout>
